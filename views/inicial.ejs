@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" /></head>
+    <title>Catálogo</title>
+<body>
+    <header>
+        <span id="icon" class="material-symbols-outlined">
+            music_note
+            </span>
+    </header>
+    <main>
+        <section class="campo">
+            <article>
+                <div class="card">
+                    <button id="btnAdd"><a href="/add"><span id="add"
+                        class="material-symbols-outlined">
+                        add
+                        </span>
+                    </a></button>
+                </div>
+                <% musicas.forEach((musica) => { %>
+                <div class="card">
+                    <figure>
+                        <img src="<%= musica.capa %>" alt="Não compatível">
+                    </figure>
+                    <button class="btnMusica" onclick="showModal('<%= musica.id %>')"><%= musica.nome %></button>
+                    
+                </div>
+                <% }) %>
+            </article>
+        </section>
+
+        <section>
+            <% musicas.forEach((musica) => { %>        
+                <div class="modal" id="<%= musica.id %>">
+                    <div class="modal-content">
+                        <span id="x" onclick="hideModal('<%= musica.id %>')">&times;</span>
+                        <figure>
+                            <img class="fotoModal" src="<%= musica.capa %>" alt="Não compatível">
+                        </figure>
+
+                        <a id= "lixeira" href="/delete/<%= musica.id%>"><span class="material-symbols-outlined">
+                            delete
+                            </span></a>
+                        <a id= "lapi" href="/editar/<%= musica.id%>"><span class="material-symbols-outlined">
+                            edit
+                            </span></a>                            
+
+                        <article>
+                            <div class="detModal">
+                                <h3 class="linhaModal"><%= musica.nome %></h3>
+
+                                <p class="linhaModal">AUTOR: <%= musica.autor %></p>
+                                <p class="linhaModal">ÁLBUM: <%= musica.album %></p>
+                                <p class="linhaModal">GÊNERO: <%= musica.genero %></p>
+                            </div>
+                        </article>
+                        
+
+                    </div>
+                </div>
+    
+                <% })  %>
+            </section>
+    </main>
+
+    <footer id="footer">
+        <p id="direitos">Todos direitos reservados a <a id="ig" href="https://github.com/manopassaro" target="_blank">@manopassaro</a>.</p>
+    </footer>
+
+
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Catálogo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/"><span id="home" class="material-symbols-outlined">
+                        home
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="campo">
+            <h1>Adicione uma música</h1>
+            <form action="/a" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+
+                <label for="album">Álbum:</label>
+                <input type="text" id="album" name="album" required>
+
+                <label for="genero">Duração:</label>
+                <input type="text" id="genero" name="genero" required>
+
+                <label for="capa">Capa:</label>
+                <input type="text" id="capa" name="capa" placeholder="Endereço da imagem" required>
+
+                <button id="adicionar" type="submit">Adicionar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
