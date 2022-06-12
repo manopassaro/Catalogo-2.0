@@ -23,12 +23,12 @@
                         </span>
                     </a></button>
                 </div>
-                <% musicas.forEach((musica) => { %>
+                <% songs.forEach((music) => { %>
                 <div class="card">
                     <figure>
-                        <img src="<%= musica.capa %>" alt="Não compatível">
+                        <img src="<%= music.capa %>" alt="Não compatível">
                     </figure>
-                    <button class="btnMusica" onclick="showModal('<%= musica.id %>')"><%= musica.nome %></button>
+                    <button class="btnMusica" onclick="showModal('<%= music.id %>')"><%= music.nome %></button>
                     
                 </div>
                 <% }) %>
@@ -36,28 +36,28 @@
         </section>
 
         <section>
-            <% musicas.forEach((musica) => { %>        
-                <div class="modal" id="<%= musica.id %>">
+            <% songs.forEach((music) => { %>        
+                <div class="modal" id="<%= music.id %>">
                     <div class="modal-content">
-                        <span id="x" onclick="hideModal('<%= musica.id %>')">&times;</span>
+                        <span id="x" onclick="hideModal('<%= music.id %>')">&times;</span>
                         <figure>
-                            <img class="fotoModal" src="<%= musica.capa %>" alt="Não compatível">
+                            <img class="fotoModal" src="<%= music.capa %>" alt="Não compatível">
                         </figure>
 
-                        <a id= "lixeira" href="/delete/<%= musica.id%>"><span class="material-symbols-outlined">
+                        <a id= "lixeira" href="/delete/<%= music.id%>"><span class="material-symbols-outlined">
                             delete
                             </span></a>
-                        <a id= "lapi" href="/editar/<%= musica.id%>"><span class="material-symbols-outlined">
+                        <a id= "lapi" href="/editar/<%= music.id%>"><span class="material-symbols-outlined">
                             edit
                             </span></a>                            
 
                         <article>
                             <div class="detModal">
-                                <h3 class="linhaModal"><%= musica.nome %></h3>
+                                <h3 class="linhaModal"><%= music.nome %></h3>
 
-                                <p class="linhaModal">AUTOR: <%= musica.autor %></p>
-                                <p class="linhaModal">ÁLBUM: <%= musica.album %></p>
-                                <p class="linhaModal">GÊNERO: <%= musica.genero %></p>
+                                <p class="linhaModal">AUTOR: <%= music.autor %></p>
+                                <p class="linhaModal">ÁLBUM: <%= music.album %></p>
+                                <p class="linhaModal">GÊNERO: <%= music.genero %></p>
                             </div>
                         </article>
                         
