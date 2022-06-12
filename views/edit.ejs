@@ -24,21 +24,18 @@
     <main>
         <section class="campo">
             <h1>Edite sua música</h1>
-            <form action="/atualizado/<%= musica.id %>" method="POST">
+            <form action="/done/<%= music.id %>" method="POST">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value="<%= musica.nome %>">
+                <input type="text" id="nome" name="nome" value="<%= music.nome %>">
 
                 <label for="autor">Autor:</label>
-                <input type="text" id="autor" name="autor" value="<%= musica.autor %>">
+                <input type="text" id="autor" name="autor" value="<%= music.autor %>">
 
                 <label for="album">Álbum:</label>
-                <input type="text" id="album" name="album" value="<%= musica.album %>">
-
-                <label for="genero">Duração:</label>
-                <input type="text" id="genero" name="genero" value="<%= musica.genero %>">
+                <input type="text" id="album" name="album" value="<%= music.album %>">
 
                 <label for="capa">Capa:</label>
-                <input type="text" id="capa" name="capa" value=<%= musica.capa %>>
+                <input type="text" id="capa" name="capa" value=<%= music.capa %>>
 
                 <button id="editar" type="submit">Salvar</button>
             </form>

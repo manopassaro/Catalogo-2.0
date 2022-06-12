@@ -1,12 +1,12 @@
 require('dotenv').config();
-const {Sequelize} = require('sequelize');
+const Sequelize = require('sequelize');
 const connection = require('../database/db');
 // const database = require("../database/db");
 
-const Song = connection.define("music", {     
+const Song = connection.define("music", {
     id: {
             type: Sequelize.INTEGER,
-            autoIncrementer: true,
+            autoIncrement: true,
             allowNull: false,
             primaryKey: true
         },
