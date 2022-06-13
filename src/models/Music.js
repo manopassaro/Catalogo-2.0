@@ -34,4 +34,9 @@ const Song = connection.define("music", {
         updatedAt: false
 });
 
+const initTable = async () => {
+        await Filme.sync();
+    };
+initTable();
+
 module.exports = Song;
