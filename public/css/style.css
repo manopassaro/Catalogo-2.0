@@ -212,7 +212,7 @@ input{
 
 .linhaModal{
     background-color: #505050;
-    margin: 2px;
+    margin: 5px;
     border-radius: 3px;
 }
 
@@ -240,6 +240,7 @@ input{
 #lixeira:hover, #lapi:hover{
     color:rgb(12, 12, 12)
 }
+
 
 
        /* FOOTER  */

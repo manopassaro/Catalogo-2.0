@@ -14,6 +14,9 @@
             </span>
     </header>
     <main>
+
+        <!-- CARDS -->
+
         <section class="campo">
             <article>
                 <div class="card">
@@ -35,6 +38,10 @@
             </article>
         </section>
 
+
+        <!-- MODAL DOS DETALHES  -->
+
+
         <section>
             <% songs.forEach((music) => { %>        
                 <div class="modal" id="<%= music.id %>">
@@ -44,7 +51,7 @@
                             <img class="fotoModal" src="<%= music.capa %>" alt="Não compatível">
                         </figure>
 
-                        <a id= "lixeira" href="/delet/<%= music.id%>"><span class="material-symbols-outlined">
+                        <a id= "lixeira" href="/delet/<%= music.id %>"><span class="material-symbols-outlined">
                             delete
                             </span></a>
                         <a id= "lapi" href="/edit/<%= music.id %>"><span class="material-symbols-outlined">
@@ -57,16 +64,18 @@
 
                                 <p class="linhaModal">AUTOR: <%= music.autor %></p>
                                 <p class="linhaModal">ÁLBUM: <%= music.album %></p>
-                                <p class="linhaModal">GÊNERO: <%= music.genero %></p>
                             </div>
                         </article>
                         
 
                     </div>
                 </div>
+
     
                 <% })  %>
             </section>
+
+
     </main>
 
     <footer id="footer">
