@@ -1,4 +1,4 @@
 # CATAGOLO
-catalogue suas músicas
+Catalogo de músicas
 
-Este projeto, feito com as linguagens CSS para estilização, JS para funções lógicas de back-end e EJS que é a junção de front e back-end responsável pela base do site, é a primeira parte de um catálogo de músicas que servirá como nota final do módulo 2.
+Este projeto, feito com as linguagens CSS para estilização, JS para funções lógicas de back-end, EJS que é a junção de front e back-end responsável pela base do site e banco de dados para armazenagem de informações, é um catálogo de músicas completo que servirá como nota final do módulo 2. Com os conhecimentos do módulo 2 desenvolvi a criação e navegação de mais de uma página para o meu site, desenvolvi um modal de detalhes para melhor visualização do meu usúario, rotas no EJS para exercerem funções práticas com objetivo do funcionamento do meu site, e também, criei um banco de dados com estrutura adequada para a armazenagem das músicas escolhidas pelo usúario, em seguida fiz a comunicação entre o site e o banco, atráves dos arquivos db.js e Music.js. Em suma, o padrão e funcionamento do MVC(model, viewer, controller) foi aprendido e aplicado no projeto final com, espero eu, sucesso.
