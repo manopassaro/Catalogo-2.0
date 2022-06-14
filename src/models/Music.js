@@ -35,7 +35,7 @@ const Song = connection.define("music", {
 });
 
 const initTable = async () => {
-        await Filme.sync();
+        await Song.sync();
     };
 initTable();
 
